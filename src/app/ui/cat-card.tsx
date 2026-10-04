@@ -3,7 +3,7 @@ import Cat from "@/types/cat";
 
 const CatCard = ({ cat }: { cat: Cat }) => {
   return (
-    <li className="flex flex-col border border-[#ccc] rounded-xl overflow-clip">
+    <li className="flex flex-col border border-[#ccc] rounded-xl overflow-clip hover:-translate-y-2 hover:scale-101 hover:shadow-lg transition-all duration-300">
       <div className="relative h-75">
         <Image
           src={cat.image}
@@ -22,7 +22,12 @@ const CatCard = ({ cat }: { cat: Cat }) => {
 
         <ul className="flex gap-3">
           {cat.skills.map((skill) => (
-            <li key={skill}>{skill}</li>
+            <li
+              key={skill}
+              className="px-3 py-1.5 bg-blue-300 border border-solid border-blue-500 rounded-full"
+            >
+              <span className="inline-block -translate-y-0.5">{skill}</span>
+            </li>
           ))}
         </ul>
       </div>
