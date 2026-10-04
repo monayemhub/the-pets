@@ -14,7 +14,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 auto-rows-125">
+      <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 auto-rows-125 mb-10">
         {cats.map((cat) => (
           <CatCard
             key={`${cat.name}-${cat.skills[0]}-${cat.skills[1]}`}
